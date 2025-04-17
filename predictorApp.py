@@ -35,7 +35,7 @@ def set_bg_hack(main_bg):
         f"""
         <style>
         .stApp {{
-            
+            /* background-color: rgba(255, 255, 255, 0.4);*/  /* Near transparent */
             background-image: url(data:image/jpg;base64,{encoded_string});
             background-size: cover;
             background-position: center;
@@ -44,14 +44,16 @@ def set_bg_hack(main_bg):
         }}
         
         .main .block-container {{
-               /* background-color: rgba(255, 255, 255, 0.3);*/  /* Near transparent */
+                background-color: rgba(255, 255, 255, 0.6);  /* Near transparent */
 
             border-radius: 10px;
             padding: 2rem;
             box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-            margin-top: 1rem;
+            margin-top: 2rem;
             margin-bottom: 1rem;
             color:black;
+            max-width: 900px;  /* Largeur réduite du conteneur principal */
+            margin: 0 auto;    /* Centrage */
         }}
         
         [data-testid="stSidebar"] > div:first-child {{
@@ -59,17 +61,24 @@ def set_bg_hack(main_bg):
         }}
         
         .stButton>button {{
-            background-color: #4CAF50;
-            color: black;
-            border-radius: 5px;
-            padding: 0.2rem 1rem;
-            border: none;
-            transition: all 0.3s;
+           background: linear-gradient(135deg, #87CEEB 0%, #1E90FF 100%) !important;
+        color: black !important;
+        border: none !important;
+        border-radius: 8px !important;
+        padding: 0.4rem 1rem !important;
+        font-size: 0.9rem !important;
+        transition: all 0.3s !important;
+        box-shadow: 0 10px 8px rgba(0,0,0,0.1) !important;
+        width: auto !important;  /* Permet au bouton de s'adapter au contenu */
+        min-width: 300px !important;  /* Largeur minimale réduite */
+        margin: 0 auto !important;  /* Centre le bouton */
+        display: block !important;  /* Important pour le centrage */
         }}
         
         .stButton>button:hover {{
-            background-color: #45a049;
-            transform: scale(1.02);
+            background: linear-gradient(135deg, #87CEEB 0%, #00BFFF 100%) !important;
+        transform: translateY(-1px) !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
         }}
         
         .stTabs [data-baseweb="tab-list"] {{
