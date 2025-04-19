@@ -52,7 +52,7 @@ def set_bg_hack(main_bg):
             margin-top: 2rem;
             margin-bottom: 1rem;
             color:black;
-            max-width: 900px;  /* Largeur réduite du conteneur principal */
+            max-width: 1200px;  /* Largeur réduite du conteneur principal */
             margin: 0 auto;    /* Centrage */
         }}
         
@@ -97,7 +97,7 @@ def set_bg_hack(main_bg):
         }}
         
         h1, h2, h3 {{
-            color: white;
+            color: black;
         }}
         </style>
         """,
@@ -107,7 +107,7 @@ def set_bg_hack(main_bg):
 # Welcome Page
 def welcome_page():
     set_bg_hack("back2.jpg")
-    
+
     st.markdown("""
     <style>
         /* Force ALL text to be black */
@@ -190,7 +190,8 @@ def welcome_page():
     }
     </style>
     """, unsafe_allow_html=True)
-    
+    st.markdown('<div class="welcome-page">', unsafe_allow_html=True)
+
     # Main content
     st.markdown('<h1 class="welcome-title"> Compressive Strength Predictor</h1>', unsafe_allow_html=True)    
     # Centered content container
