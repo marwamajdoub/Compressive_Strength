@@ -202,7 +202,7 @@ def welcome_page():
             st.subheader("Dataset Selection", divider='gray')
             dataset_option = st.radio(
                 "Choose a dataset:",
-                ["Default Concrete Dataset", "Upload Your Own Dataset"],
+                ["Default  Dataset", "Upload Your Own Dataset"],
                 index=0,
                 help="Select the default dataset or upload your own CSV file"
             )
